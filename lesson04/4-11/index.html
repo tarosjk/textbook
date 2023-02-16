@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1>お問い合わせフォーム</h1>
+
+  <!--
+    閲覧ページ: https://example.com/contact/index.html
+    送信先: https://example.com/contact/program.php
+  -->
+  <form action="program.php" method="post" novalidate>
+    <dl>
+      <div class="form-item">
+        <dt>お名前</dt>
+        <dd>
+          <input type="text" name="userName" required>
+        </dd>
+      </div>
+      <div class="form-item">
+        <dt>メールアドレス</dt>
+        <dd>
+          <input type="email" name="userEmail">
+        </dd>
+      </div>
+      <div class="form-item">
+        <dt>職業</dt>
+        <dd>
+          <!-- checkedはブーリアン属性 -->
+          <label class="label-radio"><input type="radio" name="job" value="学生" checked>学生</label>
+          <label class="label-radio"><input type="radio" name="job" value="会社員">会社員</label>
+
+          <input type="radio" name="job" value="その他" id="other">
+          <label class="label-radio" for="other">その他</label>
+
+        </dd>
+      </div>
+      <div class="form-item">
+        <dt>お問い合わせ種別</dt>
+        <dd>
+          <select name="messageType">
+            <option value="商品について">商品について</option>
+            <option value="採用について" selected>採用について</option>
+            <option value="その他お問い合わせ">その他お問い合わせ</option>
+          </select>
+        </dd>
+      </div>
+      <div class="form-item">
+        <dt>お問い合わせ内容</dt>
+        <dd>
+          <textarea name="message" cols="30" rows="10"></textarea>
+        </dd>
+      </div>
+    </dl>
+    <div class="form-submit">
+      <input type="submit" value="送信する">
+    </div>
+  </form>
+
+</body>
+</html>

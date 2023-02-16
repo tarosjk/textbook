@@ -1,0 +1,136 @@
+@charset 'utf-8';
+
+div {
+  width: 100px;
+  height: 100px;
+  padding: 1em;
+  margin: 2em 2em 4em;
+  background: #ad4444;
+  color: #fff;
+  font-size: 14px;
+}
+
+.width {
+  transition: width 0.5s ease-out 0s;
+  transition-property: width;/* 初期値 all */
+  transition-duration: 0.5s;/* s(秒), ms(ミリ秒) 500ms */
+  transition-timing-function: cubic-bezier(.85,-0.81,.11,1.51);/* 初期値 ease */
+  transition-delay: 0s;
+}
+.width:hover {
+  width: 400px;
+}
+
+.circle {
+  transition: border-radius 0.2s;
+}
+.circle:hover {
+  border-radius: 50%;
+}
+
+.scale {
+  transition:
+    0.5s transform 1s ease-in-out,
+    background-color 1.5s;
+}
+.scale:hover {
+  transform: scale(1.5); /* 倍率 */
+  background-color:palevioletred;
+}
+
+
+@keyframes zigzag {
+  /* from */
+  0% {
+    transform: translate(0,0);/* X, Yの位置 */
+  }
+  50% {
+    transform: translate(50px, 50px);
+  }
+  /* to */
+  100% {
+    transform: translate(100px,0);
+  }
+}
+
+.sample1 {
+  animation: zigzag 2s ease 0s 3 normal;
+  animation-name: zigzag;
+  animation-duration: 2s;/*時間*/
+  animation-timing-function: ease;/*イージング*/
+  animation-delay: 0s;/*遅延*/
+  animation-iteration-count: 3;/* 繰り返し回数 */
+  animation-direction: normal;/*再生方向*/
+}
+
+@keyframes scale-and-color {
+  0% {
+    background: #ad4444;
+    transform: scale(1);/* 拡縮の倍率 */
+  }
+  50% {
+    background: #3946ad;
+    transform: scale(1.5);
+  }
+  100% {
+    background: #4dad48;
+    transform: scale(1);
+  }
+}
+
+.sample2 {
+  animation: scale-and-color 4s linear 0s infinite alternate;
+}
+
+img {
+  width: 100px;
+  margin-right: 2em;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sample3 {
+  animation: loading 1s linear infinite;
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  8% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sample4 {
+  animation: heart .8s ease infinite;
+}
+
+.sample5 {
+  animation: zigzag 2s paused infinite alternate;
+  animation-play-state: paused;/* running: 再生 */
+}
+
+.check {
+  display: block;
+}
+
+.check:checked ~ .sample5 {
+  animation-play-state: running;
+}
