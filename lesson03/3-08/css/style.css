@@ -1,0 +1,45 @@
+@charset 'utf-8';
+
+a {
+  display: block;
+  width: 200px;
+  margin: 40px auto;
+  padding: 1em;
+  text-align: center;
+}
+
+@media screen and (min-width: 960px) {
+  /* 疑似クラスセレクタ pseudo class */
+  a:hover {
+    opacity: 0.7;/* 不透明度70% opacityは0~1で設定 */
+  }
+}
+
+/* a要素で且つclass属性値がtext-link */
+a.text-link {
+  color: #008000;
+  text-decoration: underline;
+}
+
+a.button-link {
+  background: #ffd700;
+  text-decoration: none;
+  color: #ff4500;
+  font-size: 20px;
+}
+
+a.button-link2:active {
+  border-bottom: none;
+  transform: translateY(4px);/* 下に4px移動 */
+}
+
+
+a.button-link2 {
+  background: #1e90ff;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+  border-bottom: 4px solid #191970;
+}
+

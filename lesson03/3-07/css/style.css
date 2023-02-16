@@ -1,0 +1,33 @@
+@charset 'utf-8';
+
+.max480 {
+  background-color: khaki;
+}
+
+@media screen and (max-width: 480px) {
+  .max480 {
+    background-color: darkcyan;
+  }
+}
+
+.min960 {
+  background-color: aquamarine;
+}
+
+@media screen and (min-width:960px) {
+  .min960 {
+    background-color: crimson;
+  }
+}
+
+.between481-959 {
+  background-color:lightpink;
+}
+@media
+  screen and 
+  (min-width: 481px) and 
+  (max-width:959px) {
+    .between481-959 {
+      background-color:chartreuse;
+    }
+}
