@@ -1,0 +1,45 @@
+@charset 'utf-8';
+
+section {
+  width: 600px;
+  padding: 2em;
+  background: #ffebf0;
+  margin: 0 auto;
+}
+h1 {
+  margin: 0 0 1em;
+}
+
+img {
+  width: 320px;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+p {
+  line-height: 1.8;
+  background-color: yellow;
+}
+
+img {
+  float:right;
+  opacity: 0.5; /* 0(透明) ~ 1(不透明) で設定*/
+}
+
+div {
+  clear: right;/* both 両方 */
+}
+
+/* 疑似要素はインライン要素(扱い) */
+/* section::after {
+  
+} */
+
+section::before {
+  content: '先頭の疑似要素';
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;/* display: blockで使用可 */
+  display: block;
+}
