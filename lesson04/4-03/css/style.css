@@ -1,0 +1,61 @@
+@charset 'utf-8';
+
+.bg-001 {
+  background: url(../img/bg-stripe.png) left center repeat;/* repeat repeat-x repeat-y no-repeat */
+  height: 400px;
+}
+
+.bg-002 {
+  /* backgroundの値は順不同 */
+  background: #98807b url(../img/bg-cat.png) center bottom no-repeat;
+  height: 400px;
+  background-color: #98807b;
+  background-image: url(../img/bg-cat.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.bg-size {
+  background: url(../img/bg-cat-light.png) right bottom no-repeat;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+}
+
+.px {
+  background-size: 150px 50px;/* 幅 高さ */
+}
+
+.per {
+  background-size: 50% 50%;/* ボックスに対する比率 */
+}
+
+.cover {
+  background-size: cover;
+}
+
+.contain {
+  background-size: contain;
+}
+
+.bg-003,
+.bg-004 {
+  height: 300px;
+}
+
+.bg-003 {
+  background: 
+    url(../img/bg-cat.png) left bottom no-repeat,
+    url(../img/bg-stripe.png) center center repeat;
+}
+
+.bg-004 {
+  background: 
+    url(../img/bg-frame.png) center center,
+    linear-gradient(-135deg, #ffd5c9, #ff6464);
+  /* 
+    linear-gradientはbackground-image
+    ❌background-color: linear-gradient()
+    🔴background-image: linear-gradient()
+  */
+}
