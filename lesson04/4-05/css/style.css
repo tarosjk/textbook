@@ -1,0 +1,95 @@
+@charset 'utf-8';
+
+/* 全体の設定 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100vw;/* view width */
+  /* width: 100%でもOK */
+}
+
+/* ナビゲーションの装飾 */
+ul {
+  background: #37bd82;
+  text-align: center;
+}
+
+ul li {
+  display: inline-block;
+  position: relative;
+}
+
+ul li a {
+  display: block;
+  padding: 1em;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+ul li a::after {
+  content: url(../img/arrow.png);
+  margin-left: 10px;
+  vertical-align: middle;
+}
+ul li a:hover {
+  background: #2c9869;
+}
+
+ul.sub-list {
+  position: absolute;
+  left: 0;
+  top: 100%;/* 親要素の高さ */
+  display: none;
+}
+
+ul.sub-list li {
+  width: 100%;
+}
+
+/* + は兄弟要素(隣接している) */
+/*
+ul li a:hover + ul.sub-list {
+  display: block;
+}
+*/
+
+/* > 子要素セレクタ */
+ul li:hover > ul.sub-list {
+  display: block;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* その他の設定 */
+main {
+  margin-top: 60px;
+}
+
+main div {
+  background: #eee;
+  height: 80vh;
+  width: 90%;
+  margin: 0 auto 40px;
+}
+
+
+/* position: sticky */
+.second {
+  display: flex;
+  align-items: flex-start;
+}
+.second h2 {
+  position: sticky;
+  background: yellow; 
+  top: 60px;
+}

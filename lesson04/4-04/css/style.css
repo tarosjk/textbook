@@ -1,0 +1,26 @@
+@charset 'utf-8';
+
+img {
+  max-width: 100%;
+}
+section {
+  width: 200px;
+  background-color: skyblue;
+}
+
+.relative img {
+  position: relative;
+  /* top bottom left rightプロパティが使用可 */
+  top: 60px;
+  left: 100px;
+}
+
+.absolute img {
+  position: absolute;
+  top: 60px;
+  left: 100px;
+}
+
+.absolute {
+  position: relative;
+}

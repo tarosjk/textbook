@@ -1,0 +1,28 @@
+@charset 'utf-8';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  width: 100%;
+  padding: 1em;
+  background: #eee;
+}
+
+p {
+  width: 200px;
+  height: 200px;
+  background: #00c;
+  color: #fff;
+}
+
+p {
+  margin: 0 auto;
+}
+
+p {
+  text-align: center;
+}
