@@ -168,3 +168,15 @@ header {
 .open .header-gnav {
   transform: translateX(0);
 }
+
+/* TOPページ専用メニュースタイル */
+.top .icon,
+.top .icon::before,
+.top .icon::after {
+  background-color: #eee;
+}
+
+.top.open .icon::before,
+.top.open .icon::after {
+  background-color: #000;
+}
