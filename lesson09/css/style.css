@@ -324,4 +324,15 @@ footer {
     padding-bottom: 80px;
   }
 
+  .top-feature:last-of-type .top-feature_box {
+    padding-right: 40px;
+    padding-left: 60px;
+  }
+
+  .top-feature:last-of-type img {
+    margin-left: 0;
+    margin-right: -30px;
+    position: relative;
+  }
+
 }
