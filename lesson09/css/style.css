@@ -336,3 +336,30 @@ footer {
   }
 
 }
+
+/* NEWS */
+.top-list {
+  display: flex;
+  flex-wrap: wrap;/* 折り返しする 初期値: nowrap */
+  margin: 0 -10px;
+}
+
+.top-list li {
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+
+.top-list a {
+  display: flex;
+  align-items: center;
+}
+
+.top-list img {
+  flex: 0 1 90px;
+  /*
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 90px;
+  */
+}
