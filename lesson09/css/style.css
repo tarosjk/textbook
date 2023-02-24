@@ -363,3 +363,23 @@ footer {
     flex-basis: 90px;
   */
 }
+
+.top-list .top-list_info {
+  margin-left: 20px;
+}
+
+.top-list time {
+  font-size: 14px;
+  color: #333;
+}
+
+.top-list .top-list_title {
+  margin-top: 0.25em;
+  line-height: 1.4;
+}
+
+@media screen and (min-width:768px) {
+  .top-list li {
+    width: 50%;
+  }
+}
