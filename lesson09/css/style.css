@@ -432,3 +432,67 @@ footer {
   margin-left: 0;
   padding-left: 0.8em;
 }
+
+.news-article ul,
+.news-article ol {
+  padding-left: 1.5em;
+}
+
+.news-article ul {
+  list-style: disc;
+}
+
+@media screen and (min-width:768px) {
+  .news-article h2 {
+    font-size: 24px;
+  }
+  .news-article time {
+    font-size: 14px;
+  }
+}
+
+/* FAQ */
+.faq-section {
+  max-width: 800px;
+}
+
+.faq-section .faq-content {
+  margin-bottom: 60px;
+}
+
+.faq-section h2,
+.faq-section p {
+  display: flex;
+  margin-top: 1.2em;
+}
+
+.faq-section h2::before,
+.faq-section p::before {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: -0.16em;
+  margin-right: 15px;
+}
+
+.faq-section h2::before {
+  content: 'Q';
+}
+
+.faq-section p::before {
+  content: 'A';
+  color: #4eb0b5;
+}
+
+@media screen and (min-width:768px) {
+  .faq-section h2,
+  .faq-section p {
+    margin-top: 2em;
+  }
+
+  .faq-section h2::before,
+  .faq-section p::before {
+    font-size: 55px;
+    margin-top: -0.2em;
+  }
+}
